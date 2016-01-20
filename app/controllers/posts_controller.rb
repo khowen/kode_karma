@@ -1,12 +1,13 @@
 class PostsController < ApplicationController
-  #before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
-    # @user = current_user
-    # @user_id = @user[:email]
+    @user = current_user
+    @user_id = @user[:meat]
   end
 
   # GET /posts/1
@@ -50,13 +51,8 @@ class PostsController < ApplicationController
     if @user[:meta_type] == "Contributor"
       redirect_to posts_path
     end
-    puts "!!!!!!!!!!!!!!!!!#{post_params}!!!!!!!!!!!!!!!!!!"
-
 
     @post = Post.new(post_params.merge(:id => @user.need_id))
-
-
-
 
     respond_to do |format|
       if @post.save

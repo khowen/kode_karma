@@ -1,7 +1,7 @@
 class ContributorsController < ApplicationController
   #before_action :authenticate_user!
   #before_action :set_contributor, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, :except => [:new]
+  before_action :authenticate_user!, :except => [:new, :create]
 
   # GET /contributors
   # GET /contributors.json

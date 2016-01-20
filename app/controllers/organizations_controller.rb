@@ -1,5 +1,4 @@
 class OrganizationsController < ApplicationController
-  #before_action :authenticate_user!
   before_action :authenticate_user!, :except => [:new]
   #before_action :set_organization, only: [:show, :edit, :update, :destroy]
 
@@ -24,6 +23,7 @@ class OrganizationsController < ApplicationController
 
   # GET /organizations/1/edit
   def edit
+    @organization = Organization.find(params[:id])
   end
 
   # POST /organizations

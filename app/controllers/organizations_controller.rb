@@ -1,6 +1,7 @@
 class OrganizationsController < ApplicationController
   #before_action :authenticate_user!
-  before_action :set_organization, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:new]
+  #before_action :set_organization, only: [:show, :edit, :update, :destroy]
 
   # GET /organizations
   # GET /organizations.json
@@ -12,6 +13,8 @@ class OrganizationsController < ApplicationController
   # GET /organizations/1.json
   def show
     @organization = Organization.find(params[:id])
+    @user = current_user
+    @user_id = @user[:email]
   end
 
   # GET /organizations/new

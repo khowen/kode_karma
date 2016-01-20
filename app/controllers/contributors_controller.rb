@@ -1,6 +1,7 @@
 class ContributorsController < ApplicationController
   #before_action :authenticate_user!
-  before_action :set_contributor, only: [:show, :edit, :update, :destroy]
+  #before_action :set_contributor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:new]
 
   # GET /contributors
   # GET /contributors.json
@@ -11,7 +12,9 @@ class ContributorsController < ApplicationController
   # GET /contributors/1
   # GET /contributors/1.json
   def show
-    @organization = Contributor.find(params[:id])
+    @contributor = Contributor.find(params[:id])
+    @user = current_user
+    @user_id = @user[:email]
   end
 
   # GET /contributors/new
@@ -38,6 +41,11 @@ class ContributorsController < ApplicationController
       end
     end
   end
+
+
+
+
+
 
   # PATCH/PUT /contributors/1
   # PATCH/PUT /contributors/1.json

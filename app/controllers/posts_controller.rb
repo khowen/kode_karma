@@ -15,21 +15,48 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = current_user
     @user_id = @user[:email]
+
+    if @user[:meta_type] == "Contributor"
+      redirect_to posts_path
+    end
   end
 
   # GET /posts/new
   def new
+    @user = current_user
+    @user_id = @user[:email]
+    if @user[:meta_type] == "Contributor"
+      redirect_to posts_path
+    end
     @post = Post.new
+    #@post[:need] = @user
   end
 
   # GET /posts/1/edit
   def edit
+    @post = Post.find(params[:id])
+    @user = current_user
+    @user_id = @user[:email]
+    if @user[:meta_type] == "Contributor"
+      redirect_to posts_path
+    end
   end
 
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @user = current_user
+    @user_id = @user[:email]
+    if @user[:meta_type] == "Contributor"
+      redirect_to posts_path
+    end
+    puts "!!!!!!!!!!!!!!!!!#{post_params}!!!!!!!!!!!!!!!!!!"
+
+
+    @post = Post.new(post_params.merge(:need => @user.meta))
+
+
+
 
     respond_to do |format|
       if @post.save
@@ -59,6 +86,12 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    @post = Post.new(post_params)
+    @user = current_user
+    @user_id = @user[:email]
+    if @user[:meta_type] == "Contributor"
+      redirect_to posts_path
+    end
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
@@ -74,6 +107,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :description, :need_id, :need_type)
+      params.require(:post).permit(:title, :description, :need)
     end
 end

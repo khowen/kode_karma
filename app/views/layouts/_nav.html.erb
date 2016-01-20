@@ -1,0 +1,8 @@
+<div>
+  <%= link_to "Kode Karma", home_path %>
+  <ul>
+    <li><%= link_to "My Profile", home_path %></li>
+    <li><%= link_to "Needs Board", posts_path %></li>
+    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+  </ul>
+</div>

@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  resources :contributors
   resources :organizations
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
+  root to: 'static_pages#home', as: :home
+  get 'static_pages/sign_up', to: 'static_pages#sign_up', as: :sign_up
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

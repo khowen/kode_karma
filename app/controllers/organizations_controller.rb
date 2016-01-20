@@ -1,4 +1,5 @@
 class OrganizationsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
 
   # GET /organizations
@@ -10,6 +11,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations/1
   # GET /organizations/1.json
   def show
+    @organization = Organization.find(params[:id])
   end
 
   # GET /organizations/new
@@ -69,6 +71,8 @@ class OrganizationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def organization_params
-      params.require(:organization).permit(:organization_name, :ein, :focus, :description, :location, :website)
+      #params.require(:organization).permit(:organization_name, :ein, :focus, :description, :location, :website)
+      #params.require(:organization).permit(:organization_name, :ein, :focus, :description, :location, :website, user_attributes: [ :id, :email, :password ])
+      params.require(:organization).permit(:organization_name, :ein, :focus, :description, :location, :website, user_attributes: [:email, :password ])
     end
 end

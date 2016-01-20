@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Skill:</strong>
+  <%= @contributor.skill %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @contributor.website %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @contributor.company %>
+</p>
+
+<%= link_to 'Edit', edit_contributor_path(@contributor) %> |
+<%= link_to 'Back', contributors_path %>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

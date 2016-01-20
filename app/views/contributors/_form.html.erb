@@ -1,0 +1,40 @@
+<%= form_for(@contributor) do |f| %>
+  <% if @contributor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contributor.errors.count, "error") %> prohibited this contributor from being saved:</h2>
+
+      <ul>
+      <% @contributor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :user_attributes do |u| %>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= u.text_field :email %>
+  </div>
+  <div class="field">
+    <%= u.label :password %><br>
+    <%= u.text_field :password %>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :skill %><br>
+    <%= f.text_field :skill %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

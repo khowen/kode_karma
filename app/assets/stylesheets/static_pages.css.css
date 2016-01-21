@@ -1,9 +1,6 @@
 div {
   text-align: center; }
 
-h1 {
-  color: #fff; }
-
 .valign a {
   color: #fff; }
 
@@ -12,10 +9,9 @@ h1 {
   width: 100vw; }
 
 .landing {
-  background: #191411;
-  background-image: image-url("landing.png");
+  background: image-url("landing.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
 
-/*# sourceMappingURL=static_pages.css.map */
+/*# sourceMappingURL=static_pages.css.css.map */

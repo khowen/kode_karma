@@ -14,5 +14,8 @@
 <body>
   <%= render 'layouts/nav' %>
   <%= yield %>
+  <% if user_signed_in? %>
+  <%#= render 'layouts/footer' %>
+  <% end %>
 </body>
 </html>

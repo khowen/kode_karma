@@ -1,3 +1,15 @@
+.post {
+  position: relative;
+  height: 60vh; }
 
+.contrib {
+  position: absolute;
+  top: 1em;
+  right: 1em; }
+
+.fixed-action-btn {
+  position: absolute;
+  top: 1em;
+  right: 1em; }
 
 /*# sourceMappingURL=_posts.css.map */

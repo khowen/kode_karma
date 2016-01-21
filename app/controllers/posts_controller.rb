@@ -77,9 +77,11 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post = Post.new(post_params)
     @user = current_user
-    @user_id = @user[:email]
+    @post = Post.find(params[:id])
+    @post.organization = Organization.find(@user.meta.id)
+
+
     if @user[:meta_type] == "Contributor"
       redirect_to posts_path
     end

@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <%= @user_id %>
+<%= @user %>
+<%= @user.meta %>
+<%= @user.meta.id %>
 
 <h1>Listing Posts</h1>
 
@@ -20,10 +23,9 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.description %></td>
-        <td><%= post.need_id %></td>
-        <td><%= post.need_type %></td>
-          <% if @user[:meta_type] == "Organization" %>
+
             <td><%= link_to 'Show', post %></td>
+          <% if @user[:meta_type] == "Organization" %>
             <td><%= link_to 'Edit', edit_post_path(post) %></td>
             <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>

@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @user = current_user
-    @user_id = @user[:meat]
+    #@user_id = @user[:meta].id
   end
 
   # GET /posts/1
@@ -52,7 +52,11 @@ class PostsController < ApplicationController
       redirect_to posts_path
     end
 
-    @post = Post.new(post_params.merge(:id => @user.need_id))
+    @post = Post.new(post_params)
+    @post.organization = Organization.find(@user.meta.id)
+    #.merge(:organization_id => @user.meta.id)
+    #@post = Post.new(post_params)
+    #@post.organization = @user.meta.id
 
     respond_to do |format|
       if @post.save
@@ -103,6 +107,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :description, :need_id)
+      params.require(:post).permit! #(:title, :description,:organization_id)
     end
 end

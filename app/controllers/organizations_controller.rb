@@ -14,6 +14,8 @@ class OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
     @user = current_user
     @user_id = @user[:email]
+    @posts = Post.where(organization_id: @organization)
+   # @posts = current_user.posts.order(created_at: :desc)
   end
 
   # GET /organizations/new

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120022249) do
+ActiveRecord::Schema.define(version: 20160121125918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,11 +38,12 @@ ActiveRecord::Schema.define(version: 20160120022249) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
-    t.integer  "need_id"
-    t.string   "need_type"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "organization_id", null: false
   end
+
+  add_index "posts", ["organization_id"], name: "index_posts_on_organization_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -65,4 +66,5 @@ ActiveRecord::Schema.define(version: 20160120022249) do
   add_index "users", ["meta_id", "meta_type"], name: "index_users_on_meta_id_and_meta_type", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "posts", "organizations"
 end

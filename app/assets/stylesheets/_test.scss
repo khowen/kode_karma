@@ -8,6 +8,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 2em;
+}
+
 .valign {
   width: 100vw;
 }
@@ -24,4 +28,9 @@ h1 {
     padding-top: 8%;
     height: auto;
   }
+}
+
+#error_explanations {
+  color: #e64a19;
+  text-align: center;
 }

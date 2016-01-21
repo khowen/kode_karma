@@ -4,10 +4,6 @@ div {
   text-align: center;
 }
 
-h1 {
-  color: #fff;
-}
-
 .valign a {
   color: #fff;
 }
@@ -27,4 +23,10 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  h1 {
+    color: #fff;
+    margin-bottom: 2%;
+  }
 }
+

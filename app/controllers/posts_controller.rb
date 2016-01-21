@@ -25,7 +25,6 @@ class PostsController < ApplicationController
       redirect_to posts_path
     end
     @post = Post.new
-    #@post[:need] = @user
   end
 
   # GET /posts/1/edit

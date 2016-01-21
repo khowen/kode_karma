@@ -2,9 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  text-align: left;
+  color: #666;
+
 }
 
 h1 {
-  color: #333;
+  color: #666;
+}
+
+.section div {
+  text-align: left;
+}
+
+#error_explanations {
+  color: #e64a19;
+  text-align: center;
 }

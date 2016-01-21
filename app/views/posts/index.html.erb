@@ -25,7 +25,7 @@
         <td><%= post.description %></td>
 
             <td><%= link_to 'Show', post %></td>
-          <% if @user.meta.id == post.organization_id %>
+          <% if @user.meta.id == post.organization_id && @user.meta_type == 'Organization'%>
             <td><%= link_to 'Edit', edit_post_path(post) %></td>
             <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>

@@ -15,10 +15,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = current_user
     @user_id = @user[:email]
-
-    if @user[:meta_type] == "Contributor"
-      redirect_to posts_path
-    end
   end
 
   # GET /posts/new

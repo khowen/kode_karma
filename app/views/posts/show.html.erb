@@ -16,7 +16,7 @@
 
 <p>
 
-<% if @user.meta.id == @post.organization_id %>
+<% if @user.meta.id == @post.organization_id && @user.meta_type == 'Organization'%>
 <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>

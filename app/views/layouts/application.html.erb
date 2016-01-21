@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>KodeKarma</title>
+  <title>Kode Karma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"> -->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,8 +15,8 @@
 <% if user_signed_in? %>
   <%= render 'layouts/nav' %>
 <% end %>
-
-<%= yield %>
-
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>

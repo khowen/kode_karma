@@ -11,3 +11,17 @@ h1 {
 .valign {
   width: 100vw;
 }
+
+.nav-wrapper .container {
+  position: relative;
+}
+
+.brand-logo {
+  left: 0;
+
+  img {
+    width: 26%;
+    padding-top: 8%;
+    height: auto;
+  }
+}

@@ -1,3 +1,5 @@
+@import 'test';
+
 div {
   text-align: center;
 }
@@ -19,8 +21,9 @@ h1 {
   // background: url('landing.png') no-repeat center;
   // background-image: image-url("logo.png");
   //background-image: url(asset-path('landing.png'));
-  background: #191411;
-  background-image: image-url('landing.png');
+  //background: #191411;
+  background: image-url('landing.png');
+  //background: #191411;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

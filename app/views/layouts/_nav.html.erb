@@ -1,8 +1,19 @@
-<div>
-  <%= link_to "Kode Karma", home_path %>
-  <ul>
-    <li><%= link_to "My Profile", home_path %></li>
-    <li><%= link_to "Needs Board", posts_path %></li>
-    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-  </ul>
-</div>
+<nav>
+  <div class="nav-wrapper orange darken-2">
+    <div class="container">
+      <%= link_to "#{image_tag('logo.png')}".html_safe, home_path, class: "brand-logo" %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if user_signed_in? %>
+          <li><%= link_to "My Profile", home_path %></li>
+          <li><%= link_to "Needs Board", posts_path %></li>
+          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+          <li>More Info</li>
+        <%  end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+

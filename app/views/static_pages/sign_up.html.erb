@@ -1,9 +1,8 @@
-<h1>I am a ....</h1>
-
-<div class="row">
-<%= link_to "Contributor", new_contributor_path, class: "waves-effect btn-large orange darken-2", class: "waves-effect btn-large orange darken-2" %>
-<%= link_to "Organization", new_organization_path, class: "waves-effect btn-large orange darken-2" %>
-</div>
-<div class="row">
-<p>Already a user? <%= link_to "Sign In", new_user_session_path, class: "waves-effect btn orange darken-2" %></p>
+<div class="wrapper valign-wrapper landing">
+  <div class="valign">
+    <h1>I'm a...</h1>
+    <%= link_to "Contributor", new_contributor_path, class: "waves-effect btn-large orange darken-2", class: "waves-effect btn-large orange darken-2" %>
+    <%= link_to "Organization", new_organization_path, class: "waves-effect btn-large orange darken-2" %>
+    <p>Already a user? <%= link_to "Sign In", new_user_session_path, class: "waves-effect btn orange darken-2" %></p>
+  </div>
 </div>

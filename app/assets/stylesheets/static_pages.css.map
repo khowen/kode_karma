@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,GAAI;EACF,UAAU,EAAE,MAAM;;AAGpB,MAAO;EACL,KAAK,EAAE,IAAI",
+"mappings": "AAAA,GAAI;EACF,UAAU,EAAE,MAAM;;AAGpB,SAAU;EACR,KAAK,EAAE,IAAI;;AAGb,QAAS;EACP,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;;AAGd,QAAS;EACP,UAAU,EAAE,mCAAmC;EAC/C,eAAe,EAAE,KAAK",
 "sources": ["static_pages.scss"],
 "names": [],
 "file": "static_pages.css"

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,IAAK;EACH,UAAU,EAAE,IAAI;;AAGlB,EAAG;EACD,KAAK,EAAE,IAAI",
-"sources": ["organizations.scss"],
-"names": [],
-"file": "organizations.css"
-}

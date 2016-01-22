@@ -1,22 +1,13 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
-<%= @user_id %>
-<p>
-  <strong>Skill:</strong>
-  <%= @contributor.skill %>
-</p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @contributor.website %>
-</p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @contributor.company %>
-</p>
-
-<%= link_to 'Edit', edit_contributor_path(@contributor) %> |
-<%= link_to 'Back', contributors_path %>
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<ul class="collection with-header">
+  <li class="collection-header">
+    <h4 class="center-align">Profile:</h4>
+    <%= link_to '<i class="material-icons">edit</i>Do it@'.html_safe, edit_contributor_path(@contributor), class: "btn-floating deep-orange darken-2" %>
+  </li>
+  <li class="collection-item">Skills: <%= @contributor.skill %></li>
+  <li class="collection-item">Website: <%= @contributor.website %></li>
+  <li class="collection-item">Company: <%= @contributor.company %></li>
+</ul>
 </div>

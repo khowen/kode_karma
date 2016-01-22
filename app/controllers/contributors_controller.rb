@@ -25,6 +25,7 @@ class ContributorsController < ApplicationController
 
   # GET /contributors/1/edit
   def edit
+    @contributor = Contributor.find(params[:id])
   end
 
   # POST /contributors
@@ -44,13 +45,10 @@ class ContributorsController < ApplicationController
   end
 
 
-
-
-
-
   # PATCH/PUT /contributors/1
   # PATCH/PUT /contributors/1.json
   def update
+    @contributor = Contributor.find(params[:id])
     respond_to do |format|
       if @contributor.update(contributor_params)
         format.html { redirect_to @contributor, notice: 'Contributor was successfully updated.' }

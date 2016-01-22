@@ -4,6 +4,10 @@
 .post {
   position: relative;
   height: 60vh;
+
+  #notice {
+    min-height: 18vh;
+  }
 }
 
 .contrib {

@@ -1,6 +1,8 @@
 .post {
   position: relative;
   height: 60vh; }
+  .post #notice {
+    min-height: 18vh; }
 
 .contrib {
   position: absolute;

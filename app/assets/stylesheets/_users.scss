@@ -14,9 +14,11 @@ body {
   text-align: left;
 }
 
-#error_explanations {
-  color: #e64a19;
+#error_explanation {
+  color: #fff;
   text-align: center;
+  background-color: #ff3d00;
+  padding: 4%;
 }
 
 .actions {

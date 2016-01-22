@@ -5,6 +5,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations
   # GET /organizations.json
   def index
+    redirect_to home_path
     @organizations = Organization.all
   end
 

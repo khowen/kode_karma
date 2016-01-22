@@ -6,6 +6,7 @@ class ContributorsController < ApplicationController
   # GET /contributors
   # GET /contributors.json
   def index
+    redirect_to home_path
     @contributors = Contributor.all
   end
 

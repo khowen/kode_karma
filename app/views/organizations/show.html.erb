@@ -1,22 +1,24 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
-  <ul class="collection with-header">
-    <li class="collection-header">
-      <h4 class="center-align"><%= @organization.organization_name %></h4>
-      <%= link_to '<i class="material-icons">edit</i>Do it@'.html_safe, edit_organization_path(@organization), class: "btn-floating deep-orange darken-2" %>
-    </li>
-    <li class="collection-item">Focus: <%= @organization.focus %></li>
-    <li class="collection-item">Description: <%= @organization.description %></li>
-    <li class="collection-item">Location: <%= @organization.location %></li>
-    <li class="collection-item">Website: <%= @organization.website %></li>
-  </ul>
-  <ul class="collection with-header">
-    <li class="collection-header">
-      <h4 class="center-align">Active Posts:</h4>
-        <%= link_to '<i class="material-icons">add</i>Do it@'.html_safe, new_post_path, class: "btn-floating deep-orange darken-2" %>
-    </li>
-    <% @posts.each do |post| %>
-      <li class="collection-item"><%= post.title %><%= link_to '<i class="material-icons">visibility</i>Do it@'.html_safe, post, class: "secondary-content btn-floating deep-orange darken-2" %></li>
-    <% end %>
-  </ul>
+<div class="section container">
+  <div class="inner-container">
+    <p id="notice"><%= notice %></p>
+    <ul class="collection with-header">
+      <li class="collection-header">
+        <h4 class="center-align"><%= @organization.organization_name %></h4>
+        <%= link_to '<i class="material-icons">edit</i>Do it@'.html_safe, edit_organization_path(@organization), class: "btn-floating deep-orange darken-2" %>
+      </li>
+      <li class="collection-item">Focus: <%= @organization.focus %></li>
+      <li class="collection-item">Description: <%= @organization.description %></li>
+      <li class="collection-item">Location: <%= @organization.location %></li>
+      <li class="collection-item">Website: <%= @organization.website %></li>
+    </ul>
+    <ul class="collection with-header">
+      <li class="collection-header">
+        <h4 class="center-align">Active Posts:</h4>
+          <%= link_to '<i class="material-icons">add</i>Do it@'.html_safe, new_post_path, class: "btn-floating deep-orange darken-2" %>
+      </li>
+      <% @posts.each do |post| %>
+        <li class="collection-item"><%= post.title %><%= link_to '<i class="material-icons">visibility</i>Do it@'.html_safe, post, class: "secondary-content btn-floating deep-orange darken-2" %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

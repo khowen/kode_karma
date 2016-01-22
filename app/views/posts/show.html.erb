@@ -1,31 +1,29 @@
 <div class="container section">
   <div class="row">
   <%= render 'test' %>
-  <div class="col s12 m12 z-depth-1 post">
-<p id="notice"><%= notice %></p>
-<% if @user.meta.id == @post.organization_id && @user.meta_type == 'Organization'%>
-  <div class="fixed-action-btn horizontal">
-    <a class="btn-floating btn-large deep-orange darken-2">
-      <i class="large material-icons">more_vert</i>
-    </a>
-    <ul>
-      <li><%= link_to '<i class="material-icons">delete</i>Do it@'.html_safe, @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-floating deep-orange darken-2" %></li>
-      <li><%= link_to '<i class="material-icons">mode_edit</i>Do it@'.html_safe, edit_post_path(@post), class: "btn-floating deep-orange darken-2" %></li>
-      <li><%= link_to '<i class="material-icons">close</i>Do it@'.html_safe, posts_path, class: "btn-floating deep-orange darken-2" %></li>
-    </ul>
+    <div class="col s12 m12 z-depth-1 post">
+      <p id="notice"><%= notice %></p>
+      <% if @user.meta.id == @post.organization_id && @user.meta_type == 'Organization'%>
+        <div class="fixed-action-btn horizontal">
+          <a class="btn-floating btn-large deep-orange darken-2">
+            <i class="large material-icons">more_vert</i>
+          </a>
+          <ul>
+            <li><%= link_to '<i class="material-icons">delete</i>Do it@'.html_safe, @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-floating deep-orange darken-2" %></li>
+            <li><%= link_to '<i class="material-icons">mode_edit</i>Do it@'.html_safe, edit_post_path(@post), class: "btn-floating deep-orange darken-2" %></li>
+            <li><%= link_to '<i class="material-icons">close</i>Do it@'.html_safe, posts_path, class: "btn-floating deep-orange darken-2" %></li>
+          </ul>
+        </div>
+      <% else %>
+        <%= link_to '<i class="material-icons">close</i>Do it@'.html_safe, posts_path, class: "btn-floating btn-large deep-orange darken-2 contrib z-depth-2" %>
+      <% end %>
+      <h4 class="center-align"><%= @post.title %></h4>
+      <h5 class="center-align">Organization: <%= Organization.find(@post.organization_id).organization_name %></h5>
+      <p class="center-align">
+        <strong>Description:</strong>
+        <%= @post.description %>
+      </p>
+    </div>
   </div>
-<% else %>
-  <%= link_to '<i class="material-icons">close</i>Do it@'.html_safe, posts_path, class: "btn-floating btn-large deep-orange darken-2 contrib z-depth-2" %>
-<% end %>
-<h4 class="center-align"><%= @post.title %></h4>
-<h5 class="center-align">Organization: <%= Organization.find(@post.organization_id).organization_name %></h5>
-
-<p class="center-align">
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-</div>
-</div>
 </div>
 

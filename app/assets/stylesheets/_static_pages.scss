@@ -1,4 +1,4 @@
-@import 'test';
+@import 'main';
 
 div {
   text-align: center;
@@ -27,7 +27,12 @@ div {
   h1, h4 {
     color: #fff;
     margin-bottom: 2%;
+    font-weight: lighter;
   }
+}
+
+h1 {
+  margin-top: 0;
 }
 
 .row {

@@ -1,20 +1,18 @@
 <div class="container section">
-<div class="row">
-<div class="col s12 m12 post">
-<p id="notice"><%= notice %></p>
-<%= render 'test' %>
-
-<ul class="collection with-header">
-  <li class="collection-header">
-    <h4 class="center-align">Needs:</h4>
-    <% if @user[:meta_type] == "Organization" %>
-      <%= link_to '<i class="material-icons">add</i>Do it@'.html_safe, new_post_path, class: "btn-floating deep-orange darken-2" %>
-    <% end %>
-  </li>
-  <% @posts.each do |post| %>
-    <li class="collection-item"><%= post.title %><%= link_to '<i class="material-icons">visibility</i>Do it@'.html_safe, post, class: "secondary-content btn-floating deep-orange darken-2" %></li>
-  <% end %>
-</ul>
-</div>
-</div>
+  <div class="row">
+    <div class="col s12 m12 post">
+    <p id="notice"><%= notice %></p>
+    <ul class="collection with-header">
+      <li class="collection-header">
+        <h4 class="center-align">Needs:</h4>
+        <% if @user[:meta_type] == "Organization" %>
+          <%= link_to '<i class="material-icons">add</i>Do it@'.html_safe, new_post_path, class: "btn-floating deep-orange darken-2" %>
+        <% end %>
+      </li>
+      <% @posts.each do |post| %>
+        <li class="collection-item"><%= post.title %><%= link_to '<i class="material-icons">visibility</i>Do it@'.html_safe, post, class: "secondary-content btn-floating deep-orange darken-2" %></li>
+      <% end %>
+    </ul>
+    </div>
+  </div>
 </div>

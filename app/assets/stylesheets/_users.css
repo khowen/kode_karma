@@ -1,8 +1,9 @@
 body {
   color: #666; }
 
-h1 {
-  color: #666; }
+.section h1 {
+  color: #666;
+  margin: 5% auto; }
 
 .section div {
   text-align: left; }
@@ -10,10 +11,6 @@ h1 {
 #error_explanations {
   color: #e64a19;
   text-align: center; }
-
-.inner-container {
-  width: 80%;
-  margin: 0 auto; }
 
 .actions {
   margin-top: 5%; }

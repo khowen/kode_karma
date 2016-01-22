@@ -8,12 +8,9 @@
           <li><%= link_to "Needs Board", posts_path %></li>
           <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
         <% else %>
-          <li><%= link_to '<i class="material-icons">info</i>'.html_safe, home_path %></li>
+          <li><%= link_to '<i class="material-icons">info</i>'.html_safe, info_path %></li>
         <% end %>
       </ul>
     </div>
   </div>
 </nav>
-
-
-

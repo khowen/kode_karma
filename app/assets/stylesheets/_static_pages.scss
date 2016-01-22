@@ -24,9 +24,22 @@ div {
   background-position: center;
   background-size: cover;
 
-  h1 {
+  h1, h4 {
     color: #fff;
     margin-bottom: 2%;
   }
 }
 
+.row {
+  blockquote {
+    margin: 0 auto;
+    color: #fff;
+    font-variant: italic;
+  }
+
+  p {
+    margin-top: 0;
+    font-variant: italic;
+    color: #fff;
+  }
+}

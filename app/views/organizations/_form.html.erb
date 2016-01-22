@@ -2,7 +2,6 @@
   <% if @organization.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
-
       <ul>
       <% @organization.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,7 +9,6 @@
       </ul>
     </div>
   <% end %>
-
   <%= f.fields_for :user_attributes do |u| %>
   <div class="row">
   <div class="input-field field col s6">
@@ -23,7 +21,6 @@
   </div>
   </div>
   <% end %>
-
   <div class="row">
   <div class="input-field field col s6">
     <%= f.label :organization_name %><br>
@@ -34,7 +31,6 @@
     <%= f.number_field :ein %>
   </div>
   </div>
-
   <div class="row">
   <div class="input-field field col s6">
     <%= f.label :focus %><br>
@@ -45,7 +41,6 @@
     <%= f.text_field :description %>
   </div>
   </div>
-
   <div class="row">
   <div class="input-field field col s6">
     <%= f.label :location %><br>
@@ -56,7 +51,6 @@
     <%= f.text_field :website %>
   </div>
   </div>
-
   <div class="actions waves-effect btn-large deep-orange darken-2">
     <%= f.submit %>
   </div>

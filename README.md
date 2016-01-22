@@ -1,4 +1,5 @@
-# !(kodeKarma.png "logo") Kode Karma
+# Kode Karma
+![Kode Karma](public/kodeKarma.png "logo")
 
 ## Overview:
 Kode Karma is a full stack Ruby on Rails application connecting digital talent with area non-profits.
@@ -8,7 +9,8 @@ It incorporates not only MVC, REST, and CRUD, but it also uses multiple table in
 
 ## Project Notes:
 I wanted to create this app because most non-profit organizations do not have access to quality resources for producing web and mobile content.
-As a former non-profit admin and a current coder, non-profits are near and dear to me.
+As a current coder, I want to aid our community through area non-profits, but as a coder it is difficult to identify organizations who need your skill set for a project.
+As a former non-profit admin, I know first hand how difficult it is to find digital talent that wants to interface with a non-profit directly.
 
 ## Technologies Used:
 + HTML5, CSS3, Ruby, Rails 4, Postgresql, Devise Gem, Materialize Gem, Active Record
@@ -17,8 +19,8 @@ As a former non-profit admin and a current coder, non-profits are near and dear 
 + Project Planning & User Stories - [Trello](https://trello.com/b/b4sKX3VN/kode-karma)
 + Sublime Text 3
 
-## Wireframe:
-![Wireframe](public/wireframe.png "wireframe")
+## Database ERM:
+![Database ERM](https://drive.google.com/drive/folders/0B8X6uDAbr1MTc1Nva2szcTB6RjA "Database ERM")
 
 ## PSD Mockup Homepage:
 ![PSD Mockup](public/Kode-Karma-Mockup.png "PSD Mockup")

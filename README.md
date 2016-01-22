@@ -18,10 +18,10 @@ As a former non-profit admin and a current coder, non-profits are near and dear 
 + Sublime Text 3
 
 ## Wireframe:
-![Wireframe](wireframe.png "wireframe")
+![Wireframe](public/wireframe.png "wireframe")
 
 ## PSD Mockup Homepage:
-![PSD Mockup](kode-karma-mockup.png "PSD Mockup")
+![PSD Mockup](public/Kode-Karma-Mockup.png "PSD Mockup")
 
 ## Future Developments:
 + Additional functionalities for the Needs Board

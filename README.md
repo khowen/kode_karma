@@ -1,11 +1,10 @@
-# Kode Karma
 ![Kode Karma](public/kodeKarma.png "logo")
+# Kode Karma
+[https://stormy-brook-26781.herokuapp.com/](https://stormy-brook-26781.herokuapp.com/)
 
 ## Overview:
 Kode Karma is a full stack Ruby on Rails application connecting digital talent with area non-profits.
 It incorporates not only MVC, REST, and CRUD, but it also uses multiple table inheritance through polymorphism on the Devise User model.
-
-[https://stormy-brook-26781.herokuapp.com/](https://stormy-brook-26781.herokuapp.com/)
 
 ## Project Notes:
 I wanted to create this app because most non-profit organizations do not have access to quality resources for producing web and mobile content.
@@ -20,7 +19,7 @@ As a former non-profit admin, I know first hand how difficult it is to find digi
 + Sublime Text 3
 
 ## Database ERM:
-![Database ERM](https://drive.google.com/drive/folders/0B8X6uDAbr1MTc1Nva2szcTB6RjA "Database ERM")
+![Database ERM](public/erm.png "Database ERM")
 
 ## PSD Mockup Homepage:
 ![PSD Mockup](public/Kode-Karma-Mockup.png "PSD Mockup")

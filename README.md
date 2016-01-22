@@ -7,9 +7,11 @@ Kode Karma is a full stack Ruby on Rails application connecting digital talent w
 It incorporates not only MVC, REST, and CRUD, but it also uses multiple table inheritance through polymorphism on the Devise User model.
 
 ## Project Notes:
+As a current coder, I want to aid our community, but as a coder it is difficult to identify organizations in need of my particular skill set on a project by project basis.
+As a non-profit admin, I know first hand how difficult it is to find digital talent to interface with an organization directly for a project.
 I wanted to create this app because most non-profit organizations do not have access to quality resources for producing web and mobile content.
-As a current coder, I want to aid our community through area non-profits, but as a coder it is difficult to identify organizations who need your skill set for a project.
-As a former non-profit admin, I know first hand how difficult it is to find digital talent that wants to interface with a non-profit directly.
+While they have excellent ideas and initiatives that benefit the collective whole, it is hard to get those messages out to our community without a solid digital presence.
+Kode Karma was created to bridge this gap.
 
 ## Technologies Used:
 + HTML5, CSS3, Ruby, Rails 4, Postgresql, Devise Gem, Materialize Gem, Active Record

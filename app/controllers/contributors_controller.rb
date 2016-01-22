@@ -80,6 +80,6 @@ class ContributorsController < ApplicationController
     def contributor_params
       #params.require(:contributor).permit(:skill, :website, :company)
       #params.require(:contributor).permit(:skill, :website, :company, user_attributes: [ :id, :email, :password ])
-      params.require(:contributor).permit(:skill, :website, :company, user_attributes: [:email, :password ])
+      params.require(:contributor).permit(:name, :skill, :website, :company, user_attributes: [:email, :password ])
     end
 end

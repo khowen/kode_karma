@@ -10,7 +10,7 @@
     <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
   </div>
 
-  <div class="actions waves-effect btn-large deep-orange darken-2">
+  <div class="actions waves-effect btn-large deep-orange accent-3">
     <%= f.submit "Resend confirmation instructions" %>
   </div>
 <% end %>

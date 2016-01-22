@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   color: #666;
-
 }
 
 h1 {
@@ -17,4 +16,13 @@ h1 {
 #error_explanations {
   color: #e64a19;
   text-align: center;
+}
+
+.inner-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.actions {
+  margin-top: 5%;
 }

@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container section">
+<div class="row inner-container"
 <h2>Change your password</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
@@ -18,10 +19,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="actions waves-effect btn-large orange darken-2">
+  <div class="actions waves-effect btn-large deep-orange darken-2">
     <%= f.submit "Change my password" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
 </div>

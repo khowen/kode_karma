@@ -11,4 +11,11 @@ h1 {
   color: #e64a19;
   text-align: center; }
 
+.inner-container {
+  width: 80%;
+  margin: 0 auto; }
+
+.actions {
+  margin-top: 5%; }
+
 /*# sourceMappingURL=_users.css.map */

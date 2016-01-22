@@ -18,10 +18,7 @@
       <% end %>
       <h4 class="center-align"><%= @post.title %></h4>
       <h5 class="center-align">Organization: <%= Organization.find(@post.organization_id).organization_name %></h5>
-      <p class="center-align">
-        <strong>Description:</strong>
-        <%= @post.description %>
-      </p>
+      <h6 class="center-align"> Description: <%= @post.description %></h6>
     </div>
   </div>
 </div>
